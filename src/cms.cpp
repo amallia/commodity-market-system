@@ -25,11 +25,11 @@ int main(int argc, char *argv[]) {
         boost::shared_ptr<cms::Input> input_ptr;
         std::cout << header << std::endl;
         std::cout << welcomeMsg << std::endl;
-        if (argc == 2 && strcmp(argv[1], "base") == 0) {
+        if (argc == 2 && boost::equals(std::string(argv[1]), "base")) {
             input_ptr = boost::shared_ptr<cms::Input>(new cms::CLI());
-        } else if (argc == 3 && strcmp(argv[1], "ext1") && cms::isInteger(argv[2])) {
+        } else if (argc == 3 && boost::equals(std::string(argv[1]), "ext1") && cms::isInteger(argv[2])) {
             input_ptr = boost::shared_ptr<cms::Input>(new cms::NetworkInput(cms::toInt(argv[2])));
-        } else if (argc == 3 && strcmp(argv[1], "ext2") && cms::isInteger(argv[2])) {
+        } else if (argc == 3 && boost::equals(std::string(argv[1]), "ext2") && cms::isInteger(argv[2])) {
             input_ptr = boost::shared_ptr<cms::Input>(new cms::MultiThreadInput(cms::toInt(argv[2])));
         } else {
             std::cout << "Usage: ./cms base|ext1|ext2 <portNo>" << std::endl;
