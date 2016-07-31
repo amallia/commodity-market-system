@@ -1,0 +1,10 @@
+# Ignore any executables
+build/*
+bin/*
+
+# Ignore Mac specific files
+.DS_Store
+
+# Ignore IDE specific files
+/.idea/
+
