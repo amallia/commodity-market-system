@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.com/amallia/commodity-market-system.svg?token=2Cpy658AqNAqbjLFA4Z2&branch=master)](https://travis-ci.com/amallia/commodity-market-system)
 
+
 **Antonio Mallia** *(me@antoniomallia.it)*
 
 Project developed as part of the Bloomberg pre-class training.
