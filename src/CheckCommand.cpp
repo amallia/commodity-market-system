@@ -21,7 +21,7 @@ namespace cms {
                             COMMODITIES_TYPES_ENUM::_from_integral(o.getCommodity())._to_string() % o.getAmount() %
                             o.getPrice()).str();
                 } else {
-                    return (boost::format("%1% HAS BEEN FILLED") % orderID).str();
+                    return (boost::format(filled_string) % orderID).str();
                 }
 
             } else {

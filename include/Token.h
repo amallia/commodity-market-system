@@ -24,8 +24,6 @@ namespace cms {
         // Used to check if token type corresponds to the one provided
         bool isType(TokenType::_enumerated type) const;
 
-        const TokenType::_enumerated &getType() const;
-
         const std::string &getValue() const;
 
     private:

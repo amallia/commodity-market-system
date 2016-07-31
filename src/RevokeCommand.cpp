@@ -15,7 +15,7 @@ namespace cms {
             Order o = orderRepository::findOne(orderID);
             if (o.getDealer() == getDealerID()) {
                 orderRepository::remove(orderID);
-                return (boost::format("%1% HAS BEEN REVOKED") % orderID).str();
+                return (boost::format(revoke_string) % orderID).str();
             } else {
                 return "UNAUTHORIZED";
 

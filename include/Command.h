@@ -32,8 +32,11 @@ namespace cms {
         virtual std::string execute() const = 0;
 
     protected:
-        static std::string const order_info_string;
-
+        static const std::string order_info_string;
+        static const std::string post_string;
+        static const std::string aggress_string;
+        static const std::string revoke_string;
+        static const std::string filled_string;
     private:
         DEALERS_IDS_ENUM::_enumerated dealerID;
     };

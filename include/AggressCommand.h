@@ -11,6 +11,8 @@ namespace cms {
     class AggressCommand : public Command {
     private:
 
+        static const std::string aggressString;
+
         std::map<OrderID, Amount> order_amount;
 
     public:

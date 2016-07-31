@@ -6,10 +6,10 @@
 #include "ParseException.h"
 
 namespace cms {
-    std::string Input::commandExecute(std::string s) {
+    std::string Input::commandExecute(const std::string& s) {
         std::stringstream ss;
         try {
-            boost::shared_ptr<Command> command_ptr = parser::parse_message(std::string(s));
+            boost::shared_ptr<Command> command_ptr = parser::parse_message(s);
             std::string output = command_ptr->execute();
             ss << output;
             if (!output.empty()) ss << std::endl;

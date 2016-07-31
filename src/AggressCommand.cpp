@@ -16,7 +16,7 @@ namespace cms {
                 Order &o = orderRepository::findOne(it->first);
                 if (o.getAmount() >= it->second) {
                     o.reduce(it->second);
-                    ss << (boost::format("%1% %2% %3% @ %4% FROM %5%") %
+                    ss << (boost::format(aggress_string) %
                            (o.getSide() == SIDES_TYPES_ENUM::SELL ? "BOUGHT" : "SOLD") %
                            it->second % COMMODITIES_TYPES_ENUM::_from_integral(o.getCommodity())._to_string() % o.getPrice() %
                            DEALERS_IDS_ENUM::_from_integral(o.getDealer())._to_string());

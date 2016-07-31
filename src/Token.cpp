@@ -8,9 +8,7 @@ namespace cms {
         if (type == tokenType) return true;
         else return false;
     }
-    const TokenType::_enumerated& Token::getType() const{
-        return type;
-    }
+
     const std::string& Token::getValue() const{
         return value;
     }

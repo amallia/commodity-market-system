@@ -31,7 +31,7 @@ namespace cms {
         Order o(dealer, side, commodity, amount, price);
         OrderID id = orderRepository::add(o);
 
-        return (boost::format("%1% %2% %3% %4% %5% %6% HAS BEEN POSTED") % id %
+        return (boost::format(post_string) % id %
                 DEALERS_IDS_ENUM::_from_integral(o.getDealer())._to_string() %
                 SIDES_TYPES_ENUM::_from_integral(o.getSide())._to_string() %
                 COMMODITIES_TYPES_ENUM::_from_integral(o.getCommodity())._to_string() % o.getAmount() %
